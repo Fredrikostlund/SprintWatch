@@ -5,7 +5,7 @@
 //  Created by Fredrik Östlund on 2018-10-08.
 //  Copyright © 2018 Fredrik Östlund. All rights reserved.
 //
-//HEjsan hoppsan
+
 
 import WatchKit
 import Foundation
