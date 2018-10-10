@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE03D0D216E1B000089497A /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE03D0C216E1B000089497A /* RestController.swift */; };
 		B00B5C11216DFA36008CD943 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B5C10216DFA36008CD943 /* Timer.swift */; };
 		C56E4BF1216B7EE400FB56C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */; };
 		C56E4BF3216B7EE400FB56C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF2216B7EE400FB56C6 /* ViewController.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1EE03D0C216E1B000089497A /* RestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
 		B00B5C10216DFA36008CD943 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C56E4BED216B7EE400FB56C6 /* SprintWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		C56E4C28216B7EEA00FB56C6 /* SprintWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1EE03D0C216E1B000089497A /* RestController.swift */,
 				B00B5C10216DFA36008CD943 /* Timer.swift */,
 				C56E4C29216B7EEA00FB56C6 /* InterfaceController.swift */,
 				C56E4C2B216B7EEA00FB56C6 /* ExtensionDelegate.swift */,
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00B5C11216DFA36008CD943 /* Timer.swift in Sources */,
+				1EE03D0D216E1B000089497A /* RestController.swift in Sources */,
 				C56E4C2C216B7EEA00FB56C6 /* ExtensionDelegate.swift in Sources */,
 				C56E4C2A216B7EEA00FB56C6 /* InterfaceController.swift in Sources */,
 			);

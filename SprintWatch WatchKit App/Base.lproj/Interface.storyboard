@@ -19,6 +19,11 @@
                                 <segue destination="eoK-kC-deG" kind="modal" id="XR8-Fo-gPG"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Button" id="gmd-X4-FeE">
+                            <connections>
+                                <segue destination="8ZE-Ao-ncB" kind="push" id="Yk7-Hw-M9c"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -41,6 +46,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="604.15384615384619" y="26.589743589743591"/>
+        </scene>
+        <!--Rest Controller-->
+        <scene sceneID="djP-oO-UP6">
+            <objects>
+                <controller id="8ZE-Ao-ncB" customClass="RestController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <timer alignment="center" verticalAlignment="center" id="4OU-5d-dDd"/>
+                    </items>
+                    <connections>
+                        <outlet property="RestTimer" destination="4OU-5d-dDd" id="WbC-XH-KRX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1061" y="27"/>
         </scene>
     </scenes>
 </document>
