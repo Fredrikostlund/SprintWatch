@@ -23,16 +23,24 @@
                 </controller>
             </objects>
         </scene>
-        <!--Interface Controller-->
+        <!--Timer-->
         <scene sceneID="APW-ms-6cD">
             <objects>
-                <controller id="eoK-kC-deG">
+                <controller id="eoK-kC-deG" customClass="Timer" customModule="SprintWatch_WatchKit_Extension">
                     <items>
-                        <timer width="134" height="92" alignment="left" id="O6E-hq-nOj"/>
+                        <timer width="1" alignment="center" id="jXE-IE-c0p"/>
+                        <button width="1" alignment="left" verticalAlignment="center" title="Stop" id="2I3-dQ-bJn">
+                            <connections>
+                                <action selector="startTimer" destination="eoK-kC-deG" id="gEs-Xt-4EA"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="timerOutlet" destination="jXE-IE-c0p" id="8qD-CQ-PRw"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="310.35897435897436" y="30.948717948717952"/>
+            <point key="canvasLocation" x="604.15384615384619" y="26.589743589743591"/>
         </scene>
     </scenes>
 </document>

@@ -1,20 +1,21 @@
 //
-//  InterfaceController.swift
+//  Timer.swift
 //  SprintWatch WatchKit Extension
 //
-//  Created by Fredrik Östlund on 2018-10-08.
+//  Created by oscar thorwid on 2018-10-10.
 //  Copyright © 2018 Fredrik Östlund. All rights reserved.
 //
-
 
 import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
-
+class Timer: WKInterfaceController {
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        timerOutlet.setTextColor(UIColor.red)
+        timerOutlet.start()
         
         // Configure interface objects here.
     }
@@ -28,9 +29,14 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    @IBAction func buttonAction() {
-        
+    
+    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
+    
+    
+    @IBAction func startTimer() {
+        timerOutlet.stop()
         
     }
+    
     
 }

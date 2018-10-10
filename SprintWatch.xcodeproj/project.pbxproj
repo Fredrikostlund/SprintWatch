@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00B5C11216DFA36008CD943 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B5C10216DFA36008CD943 /* Timer.swift */; };
 		C56E4BF1216B7EE400FB56C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */; };
 		C56E4BF3216B7EE400FB56C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF2216B7EE400FB56C6 /* ViewController.swift */; };
 		C56E4BF6216B7EE400FB56C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56E4BF4216B7EE400FB56C6 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B00B5C10216DFA36008CD943 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		C56E4BED216B7EE400FB56C6 /* SprintWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C56E4BF2216B7EE400FB56C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		C56E4C28216B7EEA00FB56C6 /* SprintWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B00B5C10216DFA36008CD943 /* Timer.swift */,
 				C56E4C29216B7EEA00FB56C6 /* InterfaceController.swift */,
 				C56E4C2B216B7EEA00FB56C6 /* ExtensionDelegate.swift */,
 				C56E4C2D216B7EEB00FB56C6 /* Assets.xcassets */,
@@ -429,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00B5C11216DFA36008CD943 /* Timer.swift in Sources */,
 				C56E4C2C216B7EEA00FB56C6 /* ExtensionDelegate.swift in Sources */,
 				C56E4C2A216B7EEA00FB56C6 /* InterfaceController.swift in Sources */,
 			);
