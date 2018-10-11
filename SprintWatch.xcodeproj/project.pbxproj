@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EE03D0D216E1B000089497A /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE03D0C216E1B000089497A /* RestController.swift */; };
 		B00B5C11216DFA36008CD943 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B5C10216DFA36008CD943 /* Timer.swift */; };
+		C523C180216F2AB6009A692C /* circleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C17F216F2AB6009A692C /* circleInterfaceController.swift */; };
 		C56E4BF1216B7EE400FB56C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */; };
 		C56E4BF3216B7EE400FB56C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF2216B7EE400FB56C6 /* ViewController.swift */; };
 		C56E4BF6216B7EE400FB56C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56E4BF4216B7EE400FB56C6 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		1EE03D0C216E1B000089497A /* RestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
 		B00B5C10216DFA36008CD943 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		C523C17F216F2AB6009A692C /* circleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleInterfaceController.swift; sourceTree = "<group>"; };
 		C56E4BED216B7EE400FB56C6 /* SprintWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C56E4BF2216B7EE400FB56C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				C56E4C2B216B7EEA00FB56C6 /* ExtensionDelegate.swift */,
 				C56E4C2D216B7EEB00FB56C6 /* Assets.xcassets */,
 				C56E4C2F216B7EEB00FB56C6 /* Info.plist */,
+				C523C17F216F2AB6009A692C /* circleInterfaceController.swift */,
 			);
 			path = "SprintWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			files = (
 				B00B5C11216DFA36008CD943 /* Timer.swift in Sources */,
 				1EE03D0D216E1B000089497A /* RestController.swift in Sources */,
+				C523C180216F2AB6009A692C /* circleInterfaceController.swift in Sources */,
 				C56E4C2C216B7EEA00FB56C6 /* ExtensionDelegate.swift in Sources */,
 				C56E4C2A216B7EEA00FB56C6 /* InterfaceController.swift in Sources */,
 			);

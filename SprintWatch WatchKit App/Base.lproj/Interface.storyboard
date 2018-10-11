@@ -19,14 +19,46 @@
                                 <segue destination="eoK-kC-deG" kind="modal" id="XR8-Fo-gPG"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Button" id="gmd-X4-FeE">
+                        <button width="1" alignment="left" verticalAlignment="center" title="Try circle" id="gmd-X4-FeE">
                             <connections>
-                                <segue destination="8ZE-Ao-ncB" kind="push" id="Yk7-Hw-M9c"/>
+                                <segue destination="ADF-qJ-ftY" kind="push" id="nU3-ir-qnX"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Button" id="zMg-Pc-NLi"/>
                     </items>
                 </controller>
             </objects>
+        </scene>
+        <!--Circle Interface Controller-->
+        <scene sceneID="Lwj-fV-T92">
+            <objects>
+                <controller id="ADF-qJ-ftY" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="slL-ik-GhN">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="G1F-oN-XJc">
+                                    <group key="contentGroup" width="78" height="78" alignment="left" radius="39" id="aZN-g9-rRR">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="3" id="yb8-Zr-oi6">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="40"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="checkInButtonTapped" destination="ADF-qJ-ftY" id="jab-6f-ccv"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="slL-ik-GhN" id="pQu-qJ-OG3"/>
+                        <outlet property="circleText" destination="yb8-Zr-oi6" id="6B8-rh-u4y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="245" y="578"/>
         </scene>
         <!--Timer-->
         <scene sceneID="APW-ms-6cD">
