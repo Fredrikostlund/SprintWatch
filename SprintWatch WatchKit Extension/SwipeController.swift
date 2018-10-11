@@ -1,4 +1,12 @@
 //
+//  SwipeController.swift
+//  SprintWatch WatchKit Extension
+//
+//  Created by oscar thorwid on 2018-10-10.
+//  Copyright © 2018 Fredrik Östlund. All rights reserved.
+//
+
+//
 //  Timer.swift
 //  SprintWatch WatchKit Extension
 //
@@ -10,13 +18,12 @@ import WatchKit
 import Foundation
 
 
-class Timer: WKInterfaceController {
+class SwipeController: WKInterfaceController {
+    
+    var timer = Timer?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        timerOutlet.setTextColor(UIColor.red)
-        timerOutlet.start()
         
         // Configure interface objects here.
     }
@@ -31,14 +38,8 @@ class Timer: WKInterfaceController {
         super.didDeactivate()
     }
     
-    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
-    
-    
-    @IBAction func startTimer() {
-        timerOutlet.stop()
-        
+    @IBAction func PauseButton() {
+       Timer().timerOutlet.stop()
     }
-    
-    
     
 }
