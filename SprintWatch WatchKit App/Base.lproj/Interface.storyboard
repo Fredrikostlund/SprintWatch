@@ -23,10 +23,10 @@
                 </controller>
             </objects>
         </scene>
-        <!--Timer-->
+        <!--Timer Controller-->
         <scene sceneID="APW-ms-6cD">
             <objects>
-                <controller id="eoK-kC-deG" customClass="Timer" customModule="SprintWatch_WatchKit_Extension">
+                <controller id="eoK-kC-deG" customClass="TimerController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <timer width="1" alignment="center" verticalAlignment="center" textAlignment="center" id="jXE-IE-c0p">
                             <gestureRecognizers>
