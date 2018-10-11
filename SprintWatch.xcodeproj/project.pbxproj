@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E90BA65216F476A003D996B /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90BA64216F4769003D996B /* RestController.swift */; };
+		1E90BA69216F6EBD003D996B /* LapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90BA68216F6EBD003D996B /* LapController.swift */; };
 		B00B5C11216DFA36008CD943 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B5C10216DFA36008CD943 /* TimerController.swift */; };
 		B00B5C14216E040A008CD943 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00B5C13216E040A008CD943 /* HealthKit.framework */; };
 		B00B5C17216E0418008CD943 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00B5C16216E0418008CD943 /* ExternalAccessory.framework */; };
@@ -87,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		1E90BA64216F4769003D996B /* RestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
+		1E90BA68216F6EBD003D996B /* LapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapController.swift; sourceTree = "<group>"; };
 		B00B5C10216DFA36008CD943 /* TimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		B00B5C13216E040A008CD943 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B00B5C15216E040A008CD943 /* SprintWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SprintWatch.entitlements; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		C56E4C28216B7EEA00FB56C6 /* SprintWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1E90BA68216F6EBD003D996B /* LapController.swift */,
 				1E90BA64216F4769003D996B /* RestController.swift */,
 				B00B5C5E216E265C008CD943 /* SwipeController.swift */,
 				B00B5C10216DFA36008CD943 /* TimerController.swift */,
@@ -473,6 +476,7 @@
 				B00B5C5F216E265D008CD943 /* SwipeController.swift in Sources */,
 				B00B5C11216DFA36008CD943 /* TimerController.swift in Sources */,
 				C56E4C2C216B7EEA00FB56C6 /* ExtensionDelegate.swift in Sources */,
+				1E90BA69216F6EBD003D996B /* LapController.swift in Sources */,
 				C523C182216F4D72009A692C /* circleInterfaceController.swift in Sources */,
 				1E90BA65216F476A003D996B /* RestController.swift in Sources */,
 				C56E4C2A216B7EEA00FB56C6 /* InterfaceController.swift in Sources */,

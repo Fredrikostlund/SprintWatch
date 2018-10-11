@@ -29,6 +29,11 @@
                                 <segue destination="mcm-GM-iBE" kind="modal" id="lEc-56-ioK"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
+                            <connections>
+                                <segue destination="gKh-rv-rB7" kind="modal" id="UOJ-Bs-IMm"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -120,6 +125,30 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="865" y="401"/>
+        </scene>
+        <!--Lap Controller-->
+        <scene sceneID="c58-AU-4hh">
+            <objects>
+                <controller id="gKh-rv-rB7" customClass="LapController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label height="15" alignment="left" text="Set laps" id="ttc-zu-ouX">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker height="139" alignment="center" verticalAlignment="center" id="3yy-k8-pIM">
+                            <connections>
+                                <action selector="LapPicker:" destination="gKh-rv-rB7" id="MHf-ZW-i6w"/>
+                            </connections>
+                        </picker>
+                        <label width="35" alignment="center" verticalAlignment="bottom" text="Next" id="j7S-7k-qOg">
+                            <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="NextLabel" destination="j7S-7k-qOg" id="Bdf-jA-n55"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="924" y="-484"/>
         </scene>
     </scenes>
 </document>
