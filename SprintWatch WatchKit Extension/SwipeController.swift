@@ -20,7 +20,7 @@ import Foundation
 
 class SwipeController: WKInterfaceController {
     
-    var timer = Timer?
+    var timer = TimerController()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -39,7 +39,7 @@ class SwipeController: WKInterfaceController {
     }
     
     @IBAction func PauseButton() {
-       Timer().timerOutlet.stop()
+       TimerController().timerOutlet.stop()
     }
     
 }
