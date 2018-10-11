@@ -24,9 +24,45 @@
                                 <segue destination="GpZ-ZR-hXe" kind="modal" id="ice-J0-1U8"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Try circle" id="MAd-Pb-QjM">
+                            <connections>
+                                <segue destination="mcm-GM-iBE" kind="modal" id="lEc-56-ioK"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
+        </scene>
+        <!--Circle Interface Controller-->
+        <scene sceneID="rLz-wc-fQc">
+            <objects>
+                <controller id="mcm-GM-iBE" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="CSo-XF-7YT">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="jPP-JO-2Mg">
+                                    <group key="contentGroup" width="78" height="78" alignment="left" radius="39" id="rXg-dM-Nmg">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="3" id="0kZ-Ih-T2u">
+                                                <fontDescription key="font" type="system" pointSize="40"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="checkInButtonTapped" destination="mcm-GM-iBE" id="yWe-59-4MK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="CSo-XF-7YT" id="Tma-Gj-tQh"/>
+                        <outlet property="circleText" destination="0kZ-Ih-T2u" id="8xr-hS-Ywe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="128" y="643"/>
         </scene>
         <!--Timer Controller-->
         <scene sceneID="APW-ms-6cD">
