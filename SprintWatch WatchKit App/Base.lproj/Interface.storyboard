@@ -131,24 +131,25 @@
             <objects>
                 <controller id="gKh-rv-rB7" customClass="LapController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
-                        <label height="15" alignment="left" text="Set laps" id="ttc-zu-ouX">
+                        <label height="15" alignment="left" verticalAlignment="center" text="Set laps" id="ttc-zu-ouX">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
-                        <picker height="139" alignment="center" verticalAlignment="center" id="3yy-k8-pIM">
+                        <picker width="1" height="122" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="3yy-k8-pIM">
                             <connections>
-                                <action selector="LapPicker:" destination="gKh-rv-rB7" id="MHf-ZW-i6w"/>
+                                <action selector="lapPicker:" destination="gKh-rv-rB7" id="C0D-aq-nI6"/>
                             </connections>
                         </picker>
-                        <label width="35" alignment="center" verticalAlignment="bottom" text="Next" id="j7S-7k-qOg">
+                        <label width="35" alignment="center" verticalAlignment="center" text="Next" id="j7S-7k-qOg">
                             <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
                         </label>
                     </items>
                     <connections>
                         <outlet property="NextLabel" destination="j7S-7k-qOg" id="Bdf-jA-n55"/>
+                        <outlet property="lapPicker" destination="3yy-k8-pIM" id="8F8-P0-RAd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="924" y="-484"/>
+            <point key="canvasLocation" x="923.23076923076928" y="-487.76923076923083"/>
         </scene>
     </scenes>
 </document>
