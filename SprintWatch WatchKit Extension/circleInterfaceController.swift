@@ -23,7 +23,7 @@ class circleInterfaceController: WKInterfaceController {
         // 2
         backgroundGroup.setBackgroundImageNamed("Progress")
         // 3
-        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 10),
+        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
                                                  duration: duration,
                                                  repeatCount: 1)
         startCountdown()
@@ -44,6 +44,7 @@ class circleInterfaceController: WKInterfaceController {
         }
         else {
             circleText.setText("0")
+            backgroundGroup.stopAnimating()
         }
         
     }
