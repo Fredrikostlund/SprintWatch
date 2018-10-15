@@ -21,14 +21,14 @@ class circleInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         let duration: Double = 3
-        // 2
+        
+        //Setting background image, and animating through the set
+        //Length is the number of images to be animated, edit for smoother animation
         backgroundGroup.setBackgroundImageNamed("Progress")
-        // 3
         backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
                                                  duration: duration,
                                                  repeatCount: 1)
         startCountdown()
-        //circleText.setText("2")
 
     }
     
@@ -45,12 +45,14 @@ class circleInterfaceController: WKInterfaceController {
 //        //circleText.setText("2")
     }
     
-    
+    //Timer which handles how long the circle will be animated
     func startCountdown() {
         
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(circleInterfaceController.setRestText), userInfo: nil, repeats: false)
         
     }
+    
+    //Editing the number counter
     @objc func setRestText() {
         times = times + 1
         if times < 3 {
