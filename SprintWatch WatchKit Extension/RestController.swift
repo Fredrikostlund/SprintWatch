@@ -14,6 +14,12 @@ import UIKit
 
 class RestController: WKInterfaceController {
     
+    @IBOutlet var backgroundGroup: WKInterfaceGroup!
+    @IBOutlet weak var RestTimer: WKInterfaceTimer!
+    @IBOutlet weak var RestLabel: WKInterfaceLabel!
+    
+    var countdownTimer = Timer()
+    var times:Int = 0
     var timer = Timer()
     
     override func awake(withContext context: Any?) {
@@ -38,17 +44,21 @@ class RestController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        let duration: Double = 10
+        
+        //Setting background image, and animating through the set
+        //Length is the number of images to be animated, edit for smoother animation
+        backgroundGroup.setBackgroundImageNamed("Progress")
+        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
+                                                 duration: duration,
+                                                 repeatCount: 1)
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    @IBAction func buttonAction() {
-        
-        
-    }
 
-    @IBOutlet weak var RestTimer: WKInterfaceTimer!
-    @IBOutlet weak var RestLabel: WKInterfaceLabel!
+
 }
