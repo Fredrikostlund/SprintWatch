@@ -17,8 +17,9 @@ class circleInterfaceController: WKInterfaceController {
     var countdownTimer = Timer()
     var times:Int = 0
     
-    @IBAction func checkInButtonTapped() {
-        // 1
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         let duration: Double = 3
         // 2
         backgroundGroup.setBackgroundImageNamed("Progress")
@@ -28,6 +29,20 @@ class circleInterfaceController: WKInterfaceController {
                                                  repeatCount: 1)
         startCountdown()
         //circleText.setText("2")
+
+    }
+    
+    @IBAction func checkInButtonTapped() {
+//        // 1
+//        let duration: Double = 3
+//        // 2
+//        backgroundGroup.setBackgroundImageNamed("Progress")
+//        // 3
+//        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
+//                                                 duration: duration,
+//                                                 repeatCount: 1)
+//        startCountdown()
+//        //circleText.setText("2")
     }
     
     
