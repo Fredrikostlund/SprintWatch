@@ -14,35 +14,38 @@ class circleInterfaceController: WKInterfaceController {
     
     @IBOutlet var backgroundGroup: WKInterfaceGroup!
     @IBOutlet weak var circleText: WKInterfaceLabel!
+    var countdownTimer = Timer()
+    var times:Int = 0
     
     @IBAction func checkInButtonTapped() {
         // 1
         let duration: Double = 3
-        //let delay = DispatchTime.now() + (duration + 0.15)
         // 2
         backgroundGroup.setBackgroundImageNamed("Progress")
         // 3
         backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 10),
                                                  duration: duration,
                                                  repeatCount: 1)
-        //startCountdown()
+        startCountdown()
         //circleText.setText("2")
     }
     
-    //func startCountdown() {
-        //var countdownTimer = Timer()
-        //let numbers = [1, 2, 3]
-        //let count = 0
+    
+    func startCountdown() {
         
-        //for i in numbers {
-         //   countdownTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { (Timer) in
-           //     self.setRestText()
-            //})
-        //}
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(circleInterfaceController.setRestText), userInfo: nil, repeats: false)
         
-    //}
-    //func setRestText() {
-        //circleText.setText("2")
-    //}
+    }
+    @objc func setRestText() {
+        times = times + 1
+        if times < 3 {
+            circleText.setText(String(3 - times))
+            self.startCountdown()
+        }
+        else {
+            circleText.setText("0")
+        }
+        
+    }
     
 }
