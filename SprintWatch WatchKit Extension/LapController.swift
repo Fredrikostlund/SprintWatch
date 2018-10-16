@@ -14,12 +14,12 @@ class LapController: WKInterfaceController{
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-
+        
         setPickerItems()
         // Configure interface objects here.
     }
     
-    //sets the items 1 to 10 to lap picker
+    //sets the items 1 to 10 to lap Picker
     func setPickerItems(){
         var pickerItems: [WKPickerItem] = []
         
@@ -44,7 +44,7 @@ class LapController: WKInterfaceController{
         super.didDeactivate()
     }
     
+    //Outlet to Picker where you can choose number of laps
     @IBOutlet weak var lapPicker: WKInterfacePicker!
-    //Label tagged "Next", works as button to next view  
     
 }

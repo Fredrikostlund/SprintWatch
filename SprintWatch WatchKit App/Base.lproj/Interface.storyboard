@@ -139,17 +139,19 @@
                                 <action selector="lapPicker:" destination="gKh-rv-rB7" id="C0D-aq-nI6"/>
                             </connections>
                         </picker>
-                        <label width="35" alignment="center" verticalAlignment="center" text="Next" textAlignment="center" id="j7S-7k-qOg">
-                            <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
-                        </label>
+                        <button width="100" height="16" alignment="center" verticalAlignment="bottom" title="Next" id="IyU-58-zy7">
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="RsU-al-V4z" kind="modal" id="bCb-bt-RRP"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="NextLabel" destination="j7S-7k-qOg" id="Bdf-jA-n55"/>
                         <outlet property="lapPicker" destination="3yy-k8-pIM" id="8F8-P0-RAd"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="923.23076923076928" y="-487.76923076923083"/>
+            <point key="canvasLocation" x="923.23076923076928" y="-492.12820512820514"/>
         </scene>
         <!--Rest Time Controller-->
         <scene sceneID="mFj-zT-7dg">
@@ -164,10 +166,11 @@
                                 <action selector="lapPicker:" destination="RsU-al-V4z" id="lkO-fg-bxb"/>
                             </connections>
                         </picker>
-                        <label alignment="center" verticalAlignment="bottom" text="Done" id="tve-bZ-VZF"/>
+                        <button width="100" height="16" alignment="center" verticalAlignment="bottom" title="Done" id="R81-ME-dNP">
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="doneLabel" destination="tve-bZ-VZF" id="GOB-jf-176"/>
                         <outlet property="restTimePicker" destination="yza-Ib-qrQ" id="ljI-Bc-F9K"/>
                     </connections>
                 </controller>

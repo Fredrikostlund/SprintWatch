@@ -16,9 +16,12 @@ class RestTimeController: WKInterfaceController{
         super.awake(withContext: context)
         
         setPickerItems()
+        
+        
         // Configure interface objects here.
     }
     
+    //sets the items 1 to 60 to rest time Picker
     func setPickerItems(){
         var pickerItems: [WKPickerItem] = []
         
@@ -42,6 +45,5 @@ class RestTimeController: WKInterfaceController{
     }
     
     @IBOutlet weak var restTimePicker: WKInterfacePicker!
-    @IBOutlet weak var doneLabel: WKInterfaceLabel!
     
 }
