@@ -139,7 +139,7 @@
                                 <action selector="lapPicker:" destination="gKh-rv-rB7" id="C0D-aq-nI6"/>
                             </connections>
                         </picker>
-                        <label width="35" alignment="center" verticalAlignment="center" text="Next" id="j7S-7k-qOg">
+                        <label width="35" alignment="center" verticalAlignment="center" text="Next" textAlignment="center" id="j7S-7k-qOg">
                             <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
                         </label>
                     </items>
@@ -150,6 +150,29 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="923.23076923076928" y="-487.76923076923083"/>
+        </scene>
+        <!--Rest Time Controller-->
+        <scene sceneID="mFj-zT-7dg">
+            <objects>
+                <controller id="RsU-al-V4z" customClass="RestTimeController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label height="15" alignment="left" verticalAlignment="center" text="Set rest time" id="bD5-tr-8ny">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker width="1" height="122" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="yza-Ib-qrQ">
+                            <connections>
+                                <action selector="lapPicker:" destination="RsU-al-V4z" id="lkO-fg-bxb"/>
+                            </connections>
+                        </picker>
+                        <label alignment="center" verticalAlignment="bottom" text="Done" id="tve-bZ-VZF"/>
+                    </items>
+                    <connections>
+                        <outlet property="doneLabel" destination="tve-bZ-VZF" id="GOB-jf-176"/>
+                        <outlet property="restTimePicker" destination="yza-Ib-qrQ" id="ljI-Bc-F9K"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
         </scene>
     </scenes>
 </document>
