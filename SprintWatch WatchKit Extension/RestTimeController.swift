@@ -12,8 +12,15 @@ import Foundation
 
 class RestTimeController: WKInterfaceController{
     
+    var pickerItems: [WKPickerItem] = []
+
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        let value:Any? = context
+        let lap = value
+        print(lap ?? "none")
         
         setPickerItems()
         
@@ -23,7 +30,6 @@ class RestTimeController: WKInterfaceController{
     
     //sets the items 1 to 60 to rest time Picker
     func setPickerItems(){
-        var pickerItems: [WKPickerItem] = []
         
         for i in 1...60{
             let item = WKPickerItem()
@@ -32,6 +38,7 @@ class RestTimeController: WKInterfaceController{
         }
         restTimePicker.setItems(pickerItems)
     }
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

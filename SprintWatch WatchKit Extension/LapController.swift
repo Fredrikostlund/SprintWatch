@@ -12,6 +12,9 @@ import Foundation
 
 class LapController: WKInterfaceController{
     
+    var lapIndex = 0
+    var pickerItems: [WKPickerItem] = []
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -21,7 +24,6 @@ class LapController: WKInterfaceController{
     
     //sets the items 1 to 10 to lap Picker
     func setPickerItems(){
-        var pickerItems: [WKPickerItem] = []
         
         for i in 1...10{
             let item = WKPickerItem()
@@ -32,6 +34,16 @@ class LapController: WKInterfaceController{
         lapPicker.setItems(pickerItems)
     }
 
+
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        
+        if segueIdentifier == "lapId"{
+            print(lapIndex)
+            return pickerItems[lapIndex]
+        }
+        
+        return pickerItems[lapIndex]
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -46,10 +58,8 @@ class LapController: WKInterfaceController{
     //Outlet to Picker where you can choose number of laps
     @IBOutlet weak var lapPicker: WKInterfacePicker!
     
-    @IBAction func pickerChanged(_ value: Int) {
-        print(value)
-    }
-    @IBAction func nextBtn() {
+    @IBAction func pickerChanged(_ value: Int){
+        lapIndex = value
     }
     
 }

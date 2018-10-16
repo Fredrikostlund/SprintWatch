@@ -37,6 +37,7 @@
                     </items>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="582" y="-360"/>
         </scene>
         <!--Circle Interface Controller-->
         <scene sceneID="rLz-wc-fQc">
@@ -140,10 +141,10 @@
                             </connections>
                         </picker>
                         <button width="100" height="16" alignment="center" verticalAlignment="bottom" title="Next" id="IyU-58-zy7">
-                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="nextBtn" destination="gKh-rv-rB7" id="3MY-iv-XCg"/>
-                                <segue destination="RsU-al-V4z" kind="push" identifier="lapID" id="PsH-C9-cGb"/>
+                                <segue destination="RsU-al-V4z" kind="modal" identifier="lapId" id="PsH-C9-cGb"/>
                             </connections>
                         </button>
                     </items>

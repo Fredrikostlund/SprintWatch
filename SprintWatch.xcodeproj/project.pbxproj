@@ -741,7 +741,7 @@
 				CODE_SIGN_ENTITLEMENTS = SprintWatch/SprintWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQD9AV54UN;
+				DEVELOPMENT_TEAM = CN3KB72R3F;
 				INFOPLIST_FILE = SprintWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,7 +762,7 @@
 				CODE_SIGN_ENTITLEMENTS = SprintWatch/SprintWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQD9AV54UN;
+				DEVELOPMENT_TEAM = CN3KB72R3F;
 				INFOPLIST_FILE = SprintWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
