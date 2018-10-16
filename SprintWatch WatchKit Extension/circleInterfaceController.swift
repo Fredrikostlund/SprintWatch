@@ -32,6 +32,8 @@ class circleInterfaceController: WKInterfaceController {
 
     }
     
+    //Obsolete
+    //Remove later??? 
     @IBAction func checkInButtonTapped() {
     }
     
