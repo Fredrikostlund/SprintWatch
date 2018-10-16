@@ -26,7 +26,6 @@ class RestTimeController: WKInterfaceController{
         var pickerItems: [WKPickerItem] = []
         
         for i in 1...60{
-            print(i)
             let item = WKPickerItem()
             item.title = String(i)
             pickerItems.append(item)

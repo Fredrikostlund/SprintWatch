@@ -24,7 +24,6 @@ class LapController: WKInterfaceController{
         var pickerItems: [WKPickerItem] = []
         
         for i in 1...10{
-            print(i)
             let item = WKPickerItem()
             item.title = String(i)
             pickerItems.append(item)
@@ -46,5 +45,11 @@ class LapController: WKInterfaceController{
     
     //Outlet to Picker where you can choose number of laps
     @IBOutlet weak var lapPicker: WKInterfacePicker!
+    
+    @IBAction func pickerChanged(_ value: Int) {
+        print(value)
+    }
+    @IBAction func nextBtn() {
+    }
     
 }
