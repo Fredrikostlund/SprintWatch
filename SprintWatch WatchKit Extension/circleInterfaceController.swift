@@ -24,25 +24,16 @@ class circleInterfaceController: WKInterfaceController {
         
         //Setting background image, and animating through the set
         //Length is the number of images to be animated, edit for smoother animation
-        backgroundGroup.setBackgroundImageNamed("Progress")
-        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
+        backgroundGroup.setBackgroundImageNamed("progress")
+        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 101),
                                                  duration: duration,
                                                  repeatCount: 1)
         startCountdown()
 
     }
     
+    //Obsolete
     @IBAction func checkInButtonTapped() {
-//        // 1
-//        let duration: Double = 3
-//        // 2
-//        backgroundGroup.setBackgroundImageNamed("Progress")
-//        // 3
-//        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 11),
-//                                                 duration: duration,
-//                                                 repeatCount: 1)
-//        startCountdown()
-//        //circleText.setText("2")
     }
     
     //Timer which handles how long the circle will be animated
