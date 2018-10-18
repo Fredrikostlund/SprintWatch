@@ -13,12 +13,13 @@ import Foundation
 class RestTimeController: WKInterfaceController{
     
     var pickerItems: [WKPickerItem] = []
-
+    var laps: Any? = 0
+    var timeIndex = 0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let laps:Any? = context
+        laps = context
         print(laps ?? "none")
         
         setPickerItems()
@@ -37,6 +38,15 @@ class RestTimeController: WKInterfaceController{
         }
         restTimePicker.setItems(pickerItems)
     }
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        
+        if segueIdentifier == "SEGUE_ID"{
+            return (timeIndex+1, laps)
+        }
+        
+        return 0
+    }
 
     
     override func willActivate() {
@@ -50,5 +60,8 @@ class RestTimeController: WKInterfaceController{
     }
     
     @IBOutlet weak var restTimePicker: WKInterfacePicker!
+    @IBAction func RestTimeAction(_ value: Int) {
+        timeIndex = value
+    }
     
 }

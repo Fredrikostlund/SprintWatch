@@ -34,7 +34,7 @@ class LapController: WKInterfaceController{
         lapPicker.setItems(pickerItems)
     }
 
-
+    //Sends lap count to next view trough segue
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
         if segueIdentifier == "lapId"{
@@ -42,7 +42,7 @@ class LapController: WKInterfaceController{
             return lapIndex+1
         }
         
-        return pickerItems[lapIndex]
+        return 0
     }
     
     override func willActivate() {
