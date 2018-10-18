@@ -29,9 +29,15 @@
                                 <segue destination="mcm-GM-iBE" kind="modal" id="lEc-56-ioK"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
+                            <connections>
+                                <segue destination="gKh-rv-rB7" kind="modal" id="UOJ-Bs-IMm"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="582" y="-360"/>
         </scene>
         <!--Circle Interface Controller-->
         <scene sceneID="rLz-wc-fQc">
@@ -120,6 +126,66 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="865" y="401"/>
+        </scene>
+        <!--Lap Controller-->
+        <scene sceneID="c58-AU-4hh">
+            <objects>
+                <controller id="gKh-rv-rB7" customClass="LapController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label height="15" alignment="left" verticalAlignment="center" text="Set laps" id="ttc-zu-ouX">
+                            <color key="textColor" red="0.83137254901960778" green="0.0" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker width="1" height="122" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="3yy-k8-pIM">
+                            <connections>
+                                <action selector="pickerChanged:" destination="gKh-rv-rB7" id="6kI-Rq-K2A"/>
+                            </connections>
+                        </picker>
+                        <button width="100" height="16" alignment="center" verticalAlignment="bottom" title="Next" id="IyU-58-zy7">
+                            <color key="titleColor" red="0.83137254900000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                            <connections>
+                                <action selector="nextBtn" destination="gKh-rv-rB7" id="3MY-iv-XCg"/>
+                                <segue destination="RsU-al-V4z" kind="modal" identifier="lapId" id="PsH-C9-cGb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="lapPicker" destination="3yy-k8-pIM" id="8F8-P0-RAd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="923.23076923076928" y="-492.12820512820514"/>
+        </scene>
+        <!--Rest Time Controller-->
+        <scene sceneID="mFj-zT-7dg">
+            <objects>
+                <controller id="RsU-al-V4z" customClass="RestTimeController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label height="15" alignment="left" verticalAlignment="center" text="Set rest time" id="bD5-tr-8ny">
+                            <color key="textColor" red="0.83137254900000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <picker width="1" height="122" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="yza-Ib-qrQ">
+                            <connections>
+                                <action selector="RestTimeAction:" destination="RsU-al-V4z" id="ZL0-sn-VLi"/>
+                            </connections>
+                        </picker>
+                        <button width="100" height="16" alignment="center" verticalAlignment="bottom" title="Done" id="R81-ME-dNP">
+                            <color key="titleColor" red="0.83137254900000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="DoneBtn" destination="RsU-al-V4z" id="oQs-Nx-VI5"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="restTimePicker" destination="yza-Ib-qrQ" id="ljI-Bc-F9K"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
         </scene>
     </scenes>
 </document>
