@@ -29,6 +29,7 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
+      "filename" : "icon2.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -69,8 +70,9 @@
       "subtype" : "44mm"
     },
     {
-      "idiom" : "watch-marketing",
       "size" : "1024x1024",
+      "idiom" : "watch-marketing",
+      "filename" : "iconappstore.png",
       "scale" : "1x"
     }
   ],
