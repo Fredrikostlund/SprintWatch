@@ -20,11 +20,9 @@ class RestTimeController: WKInterfaceController{
         super.awake(withContext: context)
         
         laps = context
-        print(laps ?? "none")
         
         setPickerItems()
-        
-        
+            
         // Configure interface objects here.
     }
     
@@ -62,6 +60,10 @@ class RestTimeController: WKInterfaceController{
     @IBOutlet weak var restTimePicker: WKInterfacePicker!
     @IBAction func RestTimeAction(_ value: Int) {
         timeIndex = value
+    }
+    @IBAction func DoneBtn() {
+        print(laps ?? "none")
+        print(timeIndex+1)
     }
     
 }
