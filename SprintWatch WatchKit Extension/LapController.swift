@@ -39,7 +39,7 @@ class LapController: WKInterfaceController{
         
         if segueIdentifier == "lapId"{
             print(lapIndex)
-            return pickerItems[lapIndex]
+            return lapIndex+1
         }
         
         return pickerItems[lapIndex]

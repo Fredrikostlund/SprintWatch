@@ -18,9 +18,8 @@ class RestTimeController: WKInterfaceController{
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let value:Any? = context
-        let lap = value
-        print(lap ?? "none")
+        let laps:Any? = context
+        print(laps ?? "none")
         
         setPickerItems()
         
