@@ -32,6 +32,7 @@
                     </items>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="-31" y="27"/>
         </scene>
         <!--Circle Interface Controller-->
         <scene sceneID="rLz-wc-fQc">
@@ -72,31 +73,42 @@
                         <timer width="1" alignment="center" verticalAlignment="center" hidden="YES" textAlignment="center" id="jXE-IE-c0p">
                             <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                         </timer>
-                        <label width="136" height="133" alignment="center" verticalAlignment="center" text="0:00:00" textAlignment="center" id="Qop-iY-m92">
+                        <label alignment="left" text="1" id="J5a-fu-9Ow"/>
+                        <button width="1" alignment="left" title="Stop Timer" id="VnO-Rl-uwk">
+                            <connections>
+                                <action selector="timer_stop" destination="eoK-kC-deG" id="BaF-aL-hAm"/>
+                                <segue destination="GpZ-ZR-hXe" kind="push" identifier="stop" id="W3d-IY-gdo"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="54" alignment="center" verticalAlignment="center" text="0:00:00" textAlignment="center" id="Qop-iY-m92">
                             <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                         </label>
                     </items>
                     <connections>
+                        <outlet property="lap" destination="J5a-fu-9Ow" id="Xwt-on-bkM"/>
                         <outlet property="simple_timer_label" destination="Qop-iY-m92" id="fsx-JT-Ivr"/>
                         <outlet property="timerOutlet" destination="jXE-IE-c0p" id="8qD-CQ-PRw"/>
                         <segue destination="O41-1q-YS0" kind="relationship" relationship="nextPage" id="ALG-vG-41B"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="296.41025641025641" y="26.589743589743591"/>
+            <point key="canvasLocation" x="296.41025641025641" y="16.128205128205128"/>
         </scene>
         <!--Swipe Controller-->
         <scene sceneID="PqA-JL-TyS">
             <objects>
                 <controller id="O41-1q-YS0" customClass="SwipeController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="hQc-K9-Ous"/>
+                        <label alignment="left" text="1" id="hQc-K9-Ous"/>
                         <button width="1" alignment="left" title="Pause" id="09G-UE-WmH">
                             <connections>
                                 <action selector="PauseButton" destination="O41-1q-YS0" id="rY0-qG-mqQ"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="laps" destination="hQc-K9-Ous" id="bnd-EO-5sm"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="564" y="27"/>
@@ -117,7 +129,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="865" y="401"/>
+            <point key="canvasLocation" x="866" y="439"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ice-J0-1U8"/>
+    </inferredMetricsTieBreakers>
 </document>
