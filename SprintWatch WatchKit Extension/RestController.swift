@@ -10,6 +10,7 @@
 import WatchKit
 import Foundation
 import UIKit
+import HealthKit
 
 
 class RestController: WKInterfaceController {
@@ -22,6 +23,13 @@ class RestController: WKInterfaceController {
     var times:Int = 0
     var timer = Timer()
     
+    //Heart Rate test
+    let healthStore = HKHealthStore()
+    
+    var currenQuery : HKQuery?
+    @IBOutlet weak var heartLabel: WKInterfaceLabel!
+    
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -33,9 +41,30 @@ class RestController: WKInterfaceController {
         timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (Timer) in
             self.endOfRest()
         })
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            let healthStore = HKHealthStore()
+            let heartRateQuantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+            let allTypes = Set([HKObjectType.workoutType(),
+                                heartRateQuantityType
+                ])
+            healthStore.requestAuthorization(toShare: nil, read: allTypes) { (result, error) in
+                if let error = error {
+                    // deal with the error
+                    print(error)
+                    return
+                }
+                guard result else {
+                    // deal with the failed request
+                    return
+                }
+                // begin any necessary work if needed
+            }
+        }
+
         // Configure interface objects here.
     }
-    
+
     //Redirect to active interval after rest interval is finished
     func endOfRest(){
         RestLabel.setText("Spring")

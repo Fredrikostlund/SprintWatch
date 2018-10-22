@@ -14,6 +14,7 @@
 		B00B5C14216E040A008CD943 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00B5C13216E040A008CD943 /* HealthKit.framework */; };
 		B00B5C17216E0418008CD943 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00B5C16216E0418008CD943 /* ExternalAccessory.framework */; };
 		B00B5C5F216E265D008CD943 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B5C5E216E265C008CD943 /* SwipeController.swift */; };
+		C517CA23217E02720026C4B0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C517CA22217E02720026C4B0 /* HealthKit.framework */; };
 		C523C182216F4D72009A692C /* circleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523C181216F4D72009A692C /* circleInterfaceController.swift */; };
 		C56E4BF1216B7EE400FB56C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */; };
 		C56E4BF3216B7EE400FB56C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E4BF2216B7EE400FB56C6 /* ViewController.swift */; };
@@ -96,6 +97,8 @@
 		B00B5C15216E040A008CD943 /* SprintWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SprintWatch.entitlements; sourceTree = "<group>"; };
 		B00B5C16216E0418008CD943 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		B00B5C5E216E265C008CD943 /* SwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
+		C517CA21217E02720026C4B0 /* SprintWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SprintWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		C517CA22217E02720026C4B0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		C523C181216F4D72009A692C /* circleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleInterfaceController.swift; sourceTree = "<group>"; };
 		C56E4BED216B7EE400FB56C6 /* SprintWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56E4BF0216B7EE400FB56C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C517CA23217E02720026C4B0 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +162,7 @@
 		B00B5C12216E040A008CD943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C517CA22217E02720026C4B0 /* HealthKit.framework */,
 				B00B5C16216E0418008CD943 /* ExternalAccessory.framework */,
 				B00B5C13216E040A008CD943 /* HealthKit.framework */,
 			);
@@ -234,6 +239,7 @@
 		C56E4C28216B7EEA00FB56C6 /* SprintWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C517CA21217E02720026C4B0 /* SprintWatch WatchKit Extension.entitlements */,
 				1E90BA6C2170E5A0003D996B /* RestTimeController.swift */,
 				1E90BA68216F6EBD003D996B /* LapController.swift */,
 				1E90BA64216F4769003D996B /* RestController.swift */,
@@ -377,6 +383,11 @@
 					};
 					C56E4C23216B7EEA00FB56C6 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -660,7 +671,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SprintWatch WatchKit Extension/SprintWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				INFOPLIST_FILE = "SprintWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -681,7 +694,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SprintWatch WatchKit Extension/SprintWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				INFOPLIST_FILE = "SprintWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -704,6 +719,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				IBSC_MODULE = SprintWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "SprintWatch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SprintWatch.watchkitapp;
@@ -722,6 +738,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				IBSC_MODULE = SprintWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "SprintWatch WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.SprintWatch.watchkitapp;
@@ -741,7 +758,7 @@
 				CODE_SIGN_ENTITLEMENTS = SprintWatch/SprintWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CN3KB72R3F;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				INFOPLIST_FILE = SprintWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,7 +779,7 @@
 				CODE_SIGN_ENTITLEMENTS = SprintWatch/SprintWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CN3KB72R3F;
+				DEVELOPMENT_TEAM = NQD9AV54UN;
 				INFOPLIST_FILE = SprintWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
