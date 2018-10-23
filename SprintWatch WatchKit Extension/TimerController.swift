@@ -5,6 +5,7 @@ import UserNotifications
 class TimerController: WKInterfaceController {
     @IBOutlet weak var timerOutlet: WKInterfaceTimer! //
     @IBOutlet weak var simple_timer_label: WKInterfaceLabel!
+    
     var myTimer : Timer?
     var duration : TimeInterval = 1 //arbitrary number. 1 seconds
     
@@ -24,7 +25,7 @@ class TimerController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         if stop{
         super.awake(withContext: context)
-            simple_timer_label.setTextColor(UIColor.red)
+            //simple_timer_label.setTextColor(UIColor.red)
             let userdee = UserDefaults.standard
             let is_first_time: Bool = userdee.bool(forKey: "is_playing")
             if !is_first_time {}
@@ -39,7 +40,7 @@ class TimerController: WKInterfaceController {
         }
         else {
             super.awake(withContext: context)
-            simple_timer_label.setTextColor(UIColor.red)
+            //simple_timer_label.setTextColor(UIColor.red)
             let userdee = UserDefaults.standard
             let is_first_time: Bool = userdee.bool(forKey: "is_playing")
             if !is_first_time {}
@@ -52,11 +53,8 @@ class TimerController: WKInterfaceController {
             print("is first_time: \(is_first_time)")
             userdee.synchronize()
             stop = true
-            
-            
         }
     }
-    
     
     func timeString(time:TimeInterval) -> String {
         let hours: Int = Int(time) / 3600
