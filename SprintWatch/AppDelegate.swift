@@ -8,9 +8,11 @@
 
 import UIKit
 import HealthKit
+//let log = XCGLogger.defaultInstance()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
     var window: UIWindow?
     let healthStore = HKHealthStore()
