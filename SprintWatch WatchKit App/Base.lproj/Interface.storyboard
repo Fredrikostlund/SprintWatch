@@ -13,20 +13,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SprintWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="center" verticalAlignment="center" accessibilityLabel="Start timer" title="Start timer" id="GXw-ab-jDv" userLabel="Start timer" colorLabel="IBBuiltInLabel-Red">
-                            <connections>
-                                <action selector="buttonAction" destination="AgC-eL-Hgc" id="5xn-JJ-RRE"/>
-                                <segue destination="exP-4t-JJa" kind="modal" id="NRf-IA-R2j"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Rest" id="1px-9J-baW">
                             <connections>
                                 <segue destination="GpZ-ZR-hXe" kind="modal" id="ice-J0-1U8"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Try circle" id="MAd-Pb-QjM">
-                            <connections>
-                                <segue destination="mcm-GM-iBE" kind="modal" id="lEc-56-ioK"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
@@ -68,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="923" y="240"/>
+            <point key="canvasLocation" x="1612" y="-490"/>
         </scene>
         <!--New Timer Controller-->
         <scene sceneID="AaO-8v-EB8">
@@ -123,7 +112,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1290.2564102564104" y="238.43589743589746"/>
+            <point key="canvasLocation" x="1933" y="-488"/>
         </scene>
         <!--New Swipe Controller-->
         <scene sceneID="POt-F4-Liw">
@@ -194,7 +183,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1597.1282051282053" y="236.69230769230771"/>
+            <point key="canvasLocation" x="2240" y="-490"/>
         </scene>
         <!--Rest Controller-->
         <scene sceneID="t9c-k8-UtR">
@@ -269,6 +258,7 @@
                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="DoneBtn" destination="RsU-al-V4z" id="oQs-Nx-VI5"/>
+                                <segue destination="mcm-GM-iBE" kind="modal" identifier="countdownId" id="Dma-tU-od8"/>
                             </connections>
                         </button>
                     </items>

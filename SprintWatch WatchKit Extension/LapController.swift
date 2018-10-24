@@ -38,7 +38,6 @@ class LapController: WKInterfaceController{
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
         if segueIdentifier == "lapId"{
-            print(lapIndex)
             return lapIndex+1
         }
         

@@ -17,6 +17,19 @@ class circleInterfaceController: WKInterfaceController {
     var countdownTimer = Timer()
     var times:Int = 0
     
+    var laps: Int = 0
+    var restTime: Int = 0
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+        print(context ?? "none")
+        
+        
+        // Configure interface objects here.
+    }
+    
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
