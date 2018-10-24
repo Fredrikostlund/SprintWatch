@@ -29,6 +29,11 @@
                                 <segue destination="mcm-GM-iBE" kind="modal" id="lEc-56-ioK"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Motion" id="koQ-fh-GbB">
+                            <connections>
+                                <segue destination="hk2-Br-Iiu" kind="modal" id="92C-3I-aM7"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
                             <connections>
                                 <segue destination="gKh-rv-rB7" kind="modal" id="UOJ-Bs-IMm"/>
@@ -191,6 +196,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
+        </scene>
+        <!--Motion Controller-->
+        <scene sceneID="2E9-od-KW3">
+            <objects>
+                <controller id="hk2-Br-Iiu" customClass="MotionController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Activity" id="1Mw-QS-6mO"/>
+                    </items>
+                    <connections>
+                        <outlet property="motionLabel" destination="1Mw-QS-6mO" id="XQx-vf-hFA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1484" y="-228"/>
         </scene>
     </scenes>
 </document>
