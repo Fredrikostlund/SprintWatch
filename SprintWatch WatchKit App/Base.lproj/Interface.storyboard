@@ -16,7 +16,7 @@
                         <button width="1" alignment="center" verticalAlignment="center" accessibilityLabel="Start timer" title="Start timer" id="GXw-ab-jDv" userLabel="Start timer" colorLabel="IBBuiltInLabel-Red">
                             <connections>
                                 <action selector="buttonAction" destination="AgC-eL-Hgc" id="5xn-JJ-RRE"/>
-                                <segue destination="eoK-kC-deG" kind="modal" id="XR8-Fo-gPG"/>
+                                <segue destination="exP-4t-JJa" kind="modal" id="NRf-IA-R2j"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Rest" id="1px-9J-baW">
@@ -68,46 +68,133 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="128" y="643"/>
+            <point key="canvasLocation" x="923" y="240"/>
         </scene>
-        <!--Timer Controller-->
-        <scene sceneID="APW-ms-6cD">
+        <!--New Timer Controller-->
+        <scene sceneID="AaO-8v-EB8">
             <objects>
-                <controller id="eoK-kC-deG" customClass="TimerController" customModule="SprintWatch_WatchKit_Extension">
+                <controller id="exP-4t-JJa" customClass="NewTimerController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
-                        <timer width="1" alignment="center" verticalAlignment="center" textAlignment="center" id="jXE-IE-c0p">
-                            <gestureRecognizers>
-                                <swipeGestureRecognizer delaysTouchesBegan="YES" id="oPh-7L-TuH"/>
-                            </gestureRecognizers>
-                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
-                        </timer>
+                        <group width="1" alignment="left" id="bax-3K-OUx">
+                            <items>
+                                <group width="72" height="45" alignment="center" verticalAlignment="center" id="iDm-HG-hfA">
+                                    <items>
+                                        <label width="73" alignment="center" verticalAlignment="center" text="Laps 1/8" id="Nnn-PH-QCF">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" id="dJX-52-CQb">
+                            <items>
+                                <timer width="115" alignment="center" verticalAlignment="center" id="Nm6-7I-ngG">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                </timer>
+                            </items>
+                        </group>
+                        <group width="1" height="19" alignment="left" verticalAlignment="center" id="WJG-BF-lPa">
+                            <items>
+                                <group width="72" height="18" alignment="center" verticalAlignment="center" id="hxB-dX-LLb">
+                                    <items>
+                                        <label width="47" alignment="center" text="Active" id="RAd-fQ-1gT">
+                                            <color key="textColor" red="0.92820525169372559" green="0.0" blue="0.0041950400918722153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="BXr-xv-Qg9">
+                            <items>
+                                <group width="104" height="45" alignment="center" verticalAlignment="center" id="7c7-DW-qGD">
+                                    <items>
+                                        <label width="85" alignment="center" verticalAlignment="center" text="Heartrate" id="ts0-jW-rnv">
+                                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="timerOutlet" destination="jXE-IE-c0p" id="8qD-CQ-PRw"/>
-                        <segue destination="O41-1q-YS0" kind="relationship" relationship="nextPage" id="ALG-vG-41B"/>
+                        <outlet property="timerOutlet" destination="Nm6-7I-ngG" id="BgC-jk-4SM"/>
+                        <segue destination="t9d-ju-hFQ" kind="relationship" relationship="nextPage" id="Fer-GJ-3Oe"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="854" y="27"/>
+            <point key="canvasLocation" x="1290.2564102564104" y="238.43589743589746"/>
         </scene>
-        <!--Swipe Controller-->
-        <scene sceneID="PqA-JL-TyS">
+        <!--New Swipe Controller-->
+        <scene sceneID="POt-F4-Liw">
             <objects>
-                <controller id="O41-1q-YS0" customClass="SwipeController" customModule="SprintWatch_WatchKit_Extension">
+                <controller id="t9d-ju-hFQ" customClass="NewSwipeController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="hQc-K9-Ous"/>
-                        <button width="1" alignment="left" title="Pause" id="7h6-CK-28C">
-                            <connections>
-                                <action selector="PauseButton" destination="O41-1q-YS0" id="IFT-rg-ZlA"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="50" alignment="center" verticalAlignment="bottom" id="AKX-ej-VU8">
+                            <items>
+                                <group width="45" height="45" alignment="left" verticalAlignment="center" id="Up5-Zx-rlh">
+                                    <items>
+                                        <button width="24" height="33" alignment="center" verticalAlignment="bottom" backgroundImage="LockButton" id="reu-Xh-kmz">
+                                            <variation key="device=watch40mm" alignment="center"/>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="45" height="45" alignment="right" verticalAlignment="center" id="6NH-ZI-buZ">
+                                    <items>
+                                        <button width="35" height="35" alignment="center" verticalAlignment="bottom" backgroundImage="SettingsButton" id="4Kw-6I-cvZ"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="49" alignment="center" id="B87-kq-CUq">
+                            <items>
+                                <group width="45" height="45" alignment="left" verticalAlignment="center" id="fec-nn-fP2">
+                                    <items>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="center" backgroundImage="Pauseimage" id="MQs-cG-nIv"/>
+                                    </items>
+                                </group>
+                                <group width="45" height="45" alignment="right" verticalAlignment="center" id="IzQ-cX-uwn">
+                                    <items>
+                                        <button width="30" height="30" alignment="center" verticalAlignment="center" backgroundImage="StopButton" id="9SB-UX-AIQ">
+                                            <accessibilityTraits key="accessibilityTraits" image="YES" notEnabled="YES"/>
+                                            <connections>
+                                                <action selector="StopButton" destination="t9d-ju-hFQ" id="H0O-vC-mju"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="wqD-ys-46M">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Pause" id="upX-kP-Q2a"/>
+                                <label width="40" alignment="right" verticalAlignment="center" text="Stop" id="jwO-I6-W0A"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="jGj-WA-ojv">
+                            <items>
+                                <group width="49" height="23" alignment="left" verticalAlignment="center" id="cMm-3j-JLV">
+                                    <items>
+                                        <label width="39" alignment="center" verticalAlignment="center" text="Lock" id="ehO-7q-Dtm"/>
+                                    </items>
+                                </group>
+                                <group width="49" height="23" alignment="right" verticalAlignment="center" id="BGv-cr-3Kh">
+                                    <items>
+                                        <label width="37" height="1" heightAdjustment="38" alignment="right" verticalAlignment="center" text="Edit" id="S65-Q8-JWg"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="PauseButtonTime" destination="7h6-CK-28C" id="hss-DR-ASF"/>
+                        <outlet property="EditOutlet" destination="4Kw-6I-cvZ" id="d21-T8-RSy"/>
+                        <outlet property="LockOutlet" destination="reu-Xh-kmz" id="ZIv-7u-ome"/>
+                        <outlet property="PauseOutlet" destination="MQs-cG-nIv" id="xwm-qC-ASI"/>
+                        <outlet property="StopOutlet" destination="9SB-UX-AIQ" id="yzf-JV-hmt"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1151" y="27"/>
+            <point key="canvasLocation" x="1597.1282051282053" y="236.69230769230771"/>
         </scene>
         <!--Rest Controller-->
         <scene sceneID="t9c-k8-UtR">
@@ -130,7 +217,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="865" y="401"/>
+            <point key="canvasLocation" x="923" y="-117"/>
         </scene>
         <!--Lap Controller-->
         <scene sceneID="c58-AU-4hh">
@@ -191,6 +278,37 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
+        </scene>
+        <!--Timer Controller-->
+        <scene sceneID="9Nb-3O-bpj">
+            <objects>
+                <controller id="arr-WD-1JX" customClass="TimerController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="00:00:00" textAlignment="left" id="ZQ7-CE-Zpb">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="simple_timer_label" destination="ZQ7-CE-Zpb" id="jUv-ZV-0ze"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="923" y="-874"/>
+        </scene>
+        <!--Swipe Controller-->
+        <scene sceneID="GDm-pa-ova">
+            <objects>
+                <controller id="5GC-84-EpH" customClass="SwipeController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Pause" id="Sqr-7A-Rkq">
+                            <connections>
+                                <action selector="pauseButton" destination="5GC-84-EpH" id="pja-ag-lGp"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-875"/>
         </scene>
     </scenes>
 </document>

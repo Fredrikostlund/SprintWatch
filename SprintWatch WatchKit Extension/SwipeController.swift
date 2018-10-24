@@ -30,9 +30,9 @@ class SwipeController: WKInterfaceController {
     
     @IBOutlet weak var laps: WKInterfaceLabel!
     var number: Int = 1
-    @IBAction func PauseButton() {
-        
-        
+    
+    @IBAction func pauseButton() {
+    
         // TEST
         
         let is_Val = timer.myTimer
