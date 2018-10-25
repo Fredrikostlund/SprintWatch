@@ -69,8 +69,8 @@ class circleInterfaceController: WKInterfaceController {
             backgroundGroup.stopAnimating()
             
             //Change view after timer ended
-            presentController(withName: "TimerController", context: s)
-
+            WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "TimerController", context: s as AnyObject),(name: "PausController", context: s as AnyObject)])
+            //pushController(withName: "TimerController", context: s)
         }
         
     }
