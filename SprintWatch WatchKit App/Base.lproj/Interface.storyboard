@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="923" y="240"/>
         </scene>
-        <!--New Timer Controller-->
+        <!--timerStart-->
         <scene sceneID="AaO-8v-EB8">
             <objects>
-                <controller id="exP-4t-JJa" customClass="NewTimerController" customModule="SprintWatch_WatchKit_Extension">
+                <controller identifier="timerStart" id="exP-4t-JJa" customClass="NewTimerController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="bax-3K-OUx">
                             <items>
@@ -88,7 +88,7 @@
                         </group>
                         <group width="1" alignment="left" verticalAlignment="center" id="dJX-52-CQb">
                             <items>
-                                <timer width="115" alignment="center" verticalAlignment="center" id="Nm6-7I-ngG">
+                                <timer width="130" alignment="center" verticalAlignment="center" textAlignment="center" id="Nm6-7I-ngG">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                 </timer>
                             </items>
