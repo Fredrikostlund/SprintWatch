@@ -16,6 +16,8 @@ class RestTimeController: WKInterfaceController{
     var laps: Any? = 0
     var timeIndex: Int = 0
     
+    var s:String = ""
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -55,6 +57,14 @@ class RestTimeController: WKInterfaceController{
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    @IBAction func doneBtn() {
+        s.append(String(describing: laps ?? "none"))
+        s.append(" ")
+        s.append(String(timeIndex+1))
+        
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "CountdownController", context: s as AnyObject)])
     }
     
     @IBOutlet weak var restTimePicker: WKInterfacePicker!

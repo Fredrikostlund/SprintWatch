@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="582" y="-360"/>
         </scene>
-        <!--countdownController-->
+        <!--CountdownController-->
         <scene sceneID="rLz-wc-fQc">
             <objects>
-                <controller identifier="countdownController" fullScreen="YES" id="mcm-GM-iBE" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
+                <controller identifier="CountdownController" fullScreen="YES" id="mcm-GM-iBE" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="CSo-XF-7YT">
                             <items>
@@ -257,8 +257,7 @@
                             <color key="titleColor" red="0.83137254900000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
-                                <action selector="DoneBtn" destination="RsU-al-V4z" id="oQs-Nx-VI5"/>
-                                <segue destination="mcm-GM-iBE" kind="push" identifier="countdownId" id="Dma-tU-od8"/>
+                                <action selector="doneBtn" destination="RsU-al-V4z" id="Uh6-EK-XQP"/>
                             </connections>
                         </button>
                     </items>
