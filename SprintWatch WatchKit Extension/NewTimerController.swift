@@ -25,8 +25,11 @@ class NewTimerController: WKInterfaceController {
         laps = Int(arr[0]) ?? 0
         restTime = Int(arr[1]) ?? 0
         
-        print(laps)
-        print(restTime)
+        //If containing currentLap from RestController
+        if(arr.count == 3){
+            currentLap = Int(arr[2]) ?? 0
+            print(currentLap)
+        }
         
         setLabelText()
         
@@ -53,10 +56,10 @@ class NewTimerController: WKInterfaceController {
         
         var s = String(laps)
         s.append(" ")
-        s.append(String(currentLap))
-        s.append(" ")
         s.append(String(restTime))
-        print(s)
+        s.append(" ")
+        s.append(String(currentLap))
+        print(s,"startRest()")
         
         WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "RestController", context: s as AnyObject)])
     }

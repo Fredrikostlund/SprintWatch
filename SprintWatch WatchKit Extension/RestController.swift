@@ -21,26 +21,38 @@ class RestController: WKInterfaceController {
     var countdownTimer = Timer()
     var times:Int = 0
     var timer = Timer()
+    var restTime: Double = 0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        print(context ?? "none")
+        getData(context: context)
         
-        let date = Date.init(timeIntervalSinceNow: 10)
+        let date = Date.init(timeIntervalSinceNow: restTime)
         
         RestTimer.setDate(date)
         RestTimer.start()
         
-        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (Timer) in
-            self.endOfRest()
+        timer = Timer.scheduledTimer(withTimeInterval: restTime, repeats: false, block: { (Timer) in
+            self.endOfRest(context: context)
         })
         // Configure interface objects here.
     }
     
     //Redirect to active interval after rest interval is finished
-    func endOfRest(){
-        RestLabel.setText("Spring")
+    func endOfRest(context:Any?){
+        let values = String(describing: context ?? "none")
+        
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "TimerController", context: values as AnyObject)])
+    }
+    
+    func getData(context:Any?){
+        let s = String(describing: context ?? "none")
+        let arr = s.split(separator: " ")
+        restTime = Double(arr[1]) ?? 0
+        print(restTime,"RestController")
+        
+        
     }
     
     override func willActivate() {
