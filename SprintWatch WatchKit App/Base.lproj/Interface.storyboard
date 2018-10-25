@@ -77,7 +77,7 @@
                         </group>
                         <group width="1" alignment="left" verticalAlignment="center" id="dJX-52-CQb">
                             <items>
-                                <timer width="115" alignment="center" verticalAlignment="center" id="Nm6-7I-ngG">
+                                <timer width="126" alignment="center" verticalAlignment="center" textAlignment="center" id="Nm6-7I-ngG">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                 </timer>
                             </items>
@@ -86,7 +86,7 @@
                             <items>
                                 <group width="72" height="18" alignment="center" verticalAlignment="center" id="hxB-dX-LLb">
                                     <items>
-                                        <label width="47" alignment="center" text="Active" id="RAd-fQ-1gT">
+                                        <label width="55" alignment="center" text="Active" textAlignment="center" id="RAd-fQ-1gT">
                                             <color key="textColor" red="0.92820525169372559" green="0.0" blue="0.0041950400918722153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                         </label>
@@ -112,7 +112,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1933" y="-488"/>
+            <point key="canvasLocation" x="1932.7692307692309" y="-488.64102564102569"/>
         </scene>
         <!--New Swipe Controller-->
         <scene sceneID="POt-F4-Liw">
