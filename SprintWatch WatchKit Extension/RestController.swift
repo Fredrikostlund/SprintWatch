@@ -19,6 +19,7 @@ class RestController: WKInterfaceController {
     @IBOutlet weak var RestTimer: WKInterfaceTimer!
     @IBOutlet weak var RestLabel: WKInterfaceLabel!
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
+    @IBOutlet private weak var heart: WKInterfaceImage!
     
     
     var countdownTimer = Timer()
@@ -34,15 +35,6 @@ class RestController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        let date = Date.init(timeIntervalSinceNow: 10)
-        
-        RestTimer.setDate(date)
-        RestTimer.start()
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (Timer) in
-            self.endOfRest()
-        })
         
         if HKHealthStore.isHealthDataAvailable() {
             let healthStore = HKHealthStore()
@@ -91,6 +83,7 @@ class RestController: WKInterfaceController {
                 /// When the completion is called, an other query is executed
                 /// to fetch the latest heart rate
                 print("When the completion is called, an other query is executed to fetch the latest heart rate")
+                
                 self?.fetchLatestHeartRateSample(completion: { sample in
                     guard let sample = sample else {
                         print("gick fel i kall på fetchlatestheartratesample")
@@ -99,25 +92,18 @@ class RestController: WKInterfaceController {
 
                     /// The completion in called on a background thread, but we
                     /// need to update the UI on the main.
-                    print("Innan DispatchQueue.main.async")
                     DispatchQueue.main.async {
-                        print("I DispatchQueue.main.async")
-
-                        print("Converting the heart rate to bpm")
                         /// Converting the heart rate to bpm
                         let heartRateUnit = HKUnit(from: "count/min")
                         let heartRate = sample
                             .quantity
                             .doubleValue(for: heartRateUnit)
-                        
-                        print(heartRate)
-                        print(heartRateUnit)
 
                         /// Updating the UI with the retrieved value
                         print("Updating the UI with the retrieved value")
                         self?.heartRateLabel.setText("\(Int(heartRate))")
-                        self?.RestLabel.setText("Heart")
-                        print("\(Int(heartRate)) Testar skriva ut heartrate")
+                        print("\(Int(heartRate)) BPM")
+                        self?.animateHeart()
                     }
                 })
                 
@@ -177,6 +163,14 @@ class RestController: WKInterfaceController {
         
         //TODO move all code related to circle to Willactivate()
         super.willActivate()
+        let date = Date.init(timeIntervalSinceNow: 10)
+        
+        RestTimer.setDate(date)
+        RestTimer.start()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (Timer) in
+            self.endOfRest()
+        })
         subscribeToHeartBeatChanges()
         let duration: Double = 10
         
@@ -191,6 +185,24 @@ class RestController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    func animateHeart() {
+        self.animate(withDuration: 0.5) {
+            self.heart.setWidth(60)
+            self.heart.setHeight(90)
+        }
+        
+        let when = DispatchTime.now() + Double(Int64(0.5 * double_t(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        
+        DispatchQueue.global(qos: .default).async {
+            DispatchQueue.main.asyncAfter(deadline: when) {
+                self.animate(withDuration: 0.5, animations: {
+                    self.heart.setWidth(30)
+                    self.heart.setHeight(30)
+                })            }
+            
+            
+        }
     }
 
     
