@@ -26,8 +26,6 @@ class circleInterfaceController: WKInterfaceController {
         
         print(context ?? "none")
         s = String(describing: context ?? "none")
-        
-        self.pushController(withName: "TimerController", context: s)
 
         // Configure interface objects here.
     }
