@@ -12,12 +12,38 @@ import Foundation
 
 class NewTimerController: WKInterfaceController {
     
-    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
+    var currentLap: Int = 0
+    var laps: Int = 0
+    var restTime: Int = 0
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        print(context ?? "none")
+        
+        //extract laps and rest time from context value
+        let s = String(describing: context ?? "none")
+        let arr = s.split(separator: " ")
+        laps = Int(arr[0]) ?? 0
+        restTime = Int(arr[1]) ?? 0
+        
+        print(laps)
+        print(restTime)
+        
+        setLabelText()
+        
+        //Start timer
         timerOutlet.start()
+        
         // Configure interface objects here.
+    }
+    
+    func setLabelText(){
+        currentLap += 1
+        
+        var s = String(currentLap)
+        s.append("/")
+        s.append(String(laps))
+        
+        lapLbl.setText(s)
     }
     
     override func willActivate() {
@@ -29,9 +55,9 @@ class NewTimerController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    @IBAction func buttonAction() {
-        
-        
-    }
+    
+    @IBOutlet weak var lapLbl: WKInterfaceLabel!
+    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
+
     
 }

@@ -107,6 +107,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="lapLbl" destination="Nnn-PH-QCF" id="Hhr-2L-zby"/>
                         <outlet property="timerOutlet" destination="Nm6-7I-ngG" id="BgC-jk-4SM"/>
                         <segue destination="t9d-ju-hFQ" kind="relationship" relationship="nextPage" id="yGi-Iq-CzW"/>
                     </connections>
