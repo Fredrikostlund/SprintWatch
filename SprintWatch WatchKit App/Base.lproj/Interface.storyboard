@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="2240" y="-490"/>
         </scene>
-        <!--Rest Controller-->
+        <!--RestController-->
         <scene sceneID="t9c-k8-UtR">
             <objects>
-                <controller id="GpZ-ZR-hXe" customClass="RestController" customModule="SprintWatch_WatchKit_Extension">
+                <controller identifier="RestController" id="GpZ-ZR-hXe" customClass="RestController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="left" contentMode="center" layout="vertical" id="8QU-5A-VYn">
                             <items>

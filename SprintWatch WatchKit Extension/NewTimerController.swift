@@ -32,10 +32,12 @@ class NewTimerController: WKInterfaceController {
         
         //Start timer
         timerOutlet.start()
+        startRest()
         
         // Configure interface objects here.
     }
     
+    //sets lap label to current lap and max laps (current/max)
     func setLabelText(){
         currentLap += 1
         
@@ -44,6 +46,19 @@ class NewTimerController: WKInterfaceController {
         s.append(String(laps))
         
         lapLbl.setText(s)
+    }
+    
+    //Starts rest, sends current lap, number of laps and restTime to RestController
+    func startRest(){
+        
+        var s = String(laps)
+        s.append(" ")
+        s.append(String(currentLap))
+        s.append(" ")
+        s.append(String(restTime))
+        print(s)
+        
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "RestController", context: s as AnyObject)])
     }
     
     override func willActivate() {

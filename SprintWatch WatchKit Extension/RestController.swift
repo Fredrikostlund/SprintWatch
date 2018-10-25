@@ -25,6 +25,8 @@ class RestController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        print(context ?? "none")
+        
         let date = Date.init(timeIntervalSinceNow: 10)
         
         RestTimer.setDate(date)
