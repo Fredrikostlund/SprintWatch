@@ -19,13 +19,16 @@ class circleInterfaceController: WKInterfaceController {
     
     var laps: Int = 0
     var restTime: Int = 0
+    var s: String = ""
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         print(context ?? "none")
+        s = String(describing: context ?? "none")
         
-        
+        self.pushController(withName: "TimerController", context: s)
+
         // Configure interface objects here.
     }
     
@@ -66,6 +69,10 @@ class circleInterfaceController: WKInterfaceController {
         else {
             circleText.setText("0")
             backgroundGroup.stopAnimating()
+            
+            //Change view after timer ended
+            presentController(withName: "TimerController", context: s)
+
         }
         
     }

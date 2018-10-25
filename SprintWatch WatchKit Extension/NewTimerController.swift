@@ -15,6 +15,7 @@ class NewTimerController: WKInterfaceController {
     @IBOutlet weak var timerOutlet: WKInterfaceTimer!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        print(context ?? "none")
         timerOutlet.start()
         // Configure interface objects here.
     }

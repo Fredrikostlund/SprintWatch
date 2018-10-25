@@ -31,7 +31,7 @@
         <!--Circle Interface Controller-->
         <scene sceneID="rLz-wc-fQc">
             <objects>
-                <controller id="mcm-GM-iBE" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
+                <controller fullScreen="YES" id="mcm-GM-iBE" customClass="circleInterfaceController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="center" contentMode="center" layout="vertical" id="CSo-XF-7YT">
                             <items>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1612" y="-490"/>
         </scene>
-        <!--New Timer Controller-->
+        <!--TimerController-->
         <scene sceneID="AaO-8v-EB8">
             <objects>
-                <controller id="exP-4t-JJa" customClass="NewTimerController" customModule="SprintWatch_WatchKit_Extension">
+                <controller identifier="TimerController" id="exP-4t-JJa" customClass="NewTimerController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="bax-3K-OUx">
                             <items>
@@ -268,37 +268,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
-        </scene>
-        <!--Timer Controller-->
-        <scene sceneID="9Nb-3O-bpj">
-            <objects>
-                <controller id="arr-WD-1JX" customClass="TimerController" customModule="SprintWatch_WatchKit_Extension">
-                    <items>
-                        <label alignment="center" verticalAlignment="center" text="00:00:00" textAlignment="left" id="ZQ7-CE-Zpb">
-                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
-                        </label>
-                    </items>
-                    <connections>
-                        <outlet property="simple_timer_label" destination="ZQ7-CE-Zpb" id="jUv-ZV-0ze"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="923" y="-874"/>
-        </scene>
-        <!--Swipe Controller-->
-        <scene sceneID="GDm-pa-ova">
-            <objects>
-                <controller id="5GC-84-EpH" customClass="SwipeController" customModule="SprintWatch_WatchKit_Extension">
-                    <items>
-                        <button width="1" alignment="left" title="Pause" id="Sqr-7A-Rkq">
-                            <connections>
-                                <action selector="pauseButton" destination="5GC-84-EpH" id="pja-ag-lGp"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1256" y="-875"/>
         </scene>
     </scenes>
 </document>
