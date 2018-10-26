@@ -8,16 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SprintWatch_WatchKit_App" customModuleProvider="target">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SprintWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Rest" id="1px-9J-baW">
-                            <connections>
-                                <segue destination="GpZ-ZR-hXe" kind="modal" id="ice-J0-1U8"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
                             <connections>
                                 <segue destination="gKh-rv-rB7" kind="push" id="UOJ-Bs-IMm"/>
@@ -207,7 +202,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="923" y="-117"/>
+            <point key="canvasLocation" x="1933" y="-849"/>
         </scene>
         <!--Lap Controller-->
         <scene sceneID="c58-AU-4hh">
@@ -268,6 +263,24 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
+        </scene>
+        <!--FinishedController-->
+        <scene sceneID="QRf-zj-Uv6">
+            <objects>
+                <controller identifier="FinishedController" id="bnu-Sa-jjr" customClass="FinishedController" customModule="SprintWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="51" alignment="center" verticalAlignment="center" text="Great Workout!" textAlignment="center" id="Cvr-Ep-gmE">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Finish" id="B83-AU-qzW">
+                            <connections>
+                                <action selector="finishBtn" destination="bnu-Sa-jjr" id="R48-Hj-1zd"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1932.7692307692309" y="-178.2820512820513"/>
         </scene>
     </scenes>
 </document>

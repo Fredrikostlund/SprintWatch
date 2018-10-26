@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E6D288B2183463300326707 /* FinishedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D288A2183463300326707 /* FinishedController.swift */; };
 		1E90BA65216F476A003D996B /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90BA64216F4769003D996B /* RestController.swift */; };
 		1E90BA69216F6EBD003D996B /* LapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90BA68216F6EBD003D996B /* LapController.swift */; };
 		1E90BA6D2170E5A1003D996B /* RestTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90BA6C2170E5A0003D996B /* RestTimeController.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E6D288A2183463300326707 /* FinishedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishedController.swift; sourceTree = "<group>"; };
 		1E90BA64216F4769003D996B /* RestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
 		1E90BA68216F6EBD003D996B /* LapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LapController.swift; sourceTree = "<group>"; };
 		1E90BA6C2170E5A0003D996B /* RestTimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTimeController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		C56E4C28216B7EEA00FB56C6 /* SprintWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1E6D288A2183463300326707 /* FinishedController.swift */,
 				B0E89122217F4EAA006F0487 /* NewTimerController.swift */,
 				B0E89124217F51D0006F0487 /* NewSwipeController.swift */,
 				B0E8911E217F41E5006F0487 /* TimerController.swift */,
@@ -511,6 +514,7 @@
 				1E90BA69216F6EBD003D996B /* LapController.swift in Sources */,
 				B0E89125217F51D0006F0487 /* NewSwipeController.swift in Sources */,
 				1E90BA6D2170E5A1003D996B /* RestTimeController.swift in Sources */,
+				1E6D288B2183463300326707 /* FinishedController.swift in Sources */,
 				C523C182216F4D72009A692C /* circleInterfaceController.swift in Sources */,
 				B0E8911F217F41E5006F0487 /* TimerController.swift in Sources */,
 				B0E89123217F4EAA006F0487 /* NewTimerController.swift in Sources */,
