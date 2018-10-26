@@ -17,11 +17,13 @@ class RestController: WKInterfaceController {
     @IBOutlet var backgroundGroup: WKInterfaceGroup!
     @IBOutlet weak var RestTimer: WKInterfaceTimer!
     @IBOutlet weak var RestLabel: WKInterfaceLabel!
+    @IBOutlet weak var pulseLabel: WKInterfaceLabel!
     
     var countdownTimer = Timer()
     var times:Int = 0
     var timer = Timer()
     var restTime: Double = 0
+    var pulseTimer = Timer()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -37,6 +39,8 @@ class RestController: WKInterfaceController {
             self.endOfRest(context: context)
         })
         // Configure interface objects here.
+        
+        pulseTimer = Timer.scheduledTimer(timeInterval: TimeInterval(restTime/2), target: self, selector: #selector(RestController.setPulse), userInfo: nil, repeats: false)
     }
     
     //Redirect to active interval after rest interval is finished
@@ -52,7 +56,9 @@ class RestController: WKInterfaceController {
         restTime = Double(arr[1]) ?? 0
         print(restTime,"RestController")
         
-        
+    }
+    @objc func setPulse() {
+        pulseLabel.setText("118")
     }
     
     override func willActivate() {
