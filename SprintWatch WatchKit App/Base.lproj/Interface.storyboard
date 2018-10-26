@@ -269,5 +269,12 @@
             </objects>
             <point key="canvasLocation" x="1256.2564102564104" y="-489.51282051282055"/>
         </scene>
+        <!--TimerController-->
+        <scene sceneID="QRf-zj-Uv6">
+            <objects>
+                <controller identifier="TimerController" id="bnu-Sa-jjr" customClass="FinishedController" customModule="SprintWatch_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="1933" y="-178"/>
+        </scene>
     </scenes>
 </document>
