@@ -59,7 +59,7 @@ class RestController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let duration: Double = 10
+        let duration: Double = restTime
         
         //Setting background image, and animating through the set
         //Length is the number of images to be animated, edit for smoother animation

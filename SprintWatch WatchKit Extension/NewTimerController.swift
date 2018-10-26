@@ -35,6 +35,8 @@ class NewTimerController: WKInterfaceController {
         
         //Start timer
         timerOutlet.start()
+        
+        //start restTime
         startRest()
         
         // Configure interface objects here.
