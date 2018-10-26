@@ -13,11 +13,6 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SprintWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Rest" id="1px-9J-baW">
-                            <connections>
-                                <segue destination="GpZ-ZR-hXe" kind="modal" id="ice-J0-1U8"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Laps" id="ZWs-mQ-Fur">
                             <connections>
                                 <segue destination="gKh-rv-rB7" kind="push" id="UOJ-Bs-IMm"/>
@@ -207,7 +202,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="923" y="-117"/>
+            <point key="canvasLocation" x="1933" y="-849"/>
         </scene>
         <!--Lap Controller-->
         <scene sceneID="c58-AU-4hh">
