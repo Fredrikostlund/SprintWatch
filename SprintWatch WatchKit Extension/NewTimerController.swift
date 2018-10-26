@@ -12,9 +12,17 @@ import Foundation
 
 class NewTimerController: WKInterfaceController {
     
+    
+    @IBOutlet weak var pulseLabel: WKInterfaceLabel!
+    
+    
     var currentLap: Int = 0
     var laps: Int = 0
     var restTime: Int = 0
+    var activeTimer = Timer()
+    var pulseTimer = Timer()
+    
+    let activeSeconds = 8
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -35,7 +43,7 @@ class NewTimerController: WKInterfaceController {
         
         //Start timer
         timerOutlet.start()
-        
+        timeToRest()
 
         
         // Configure interface objects here.
@@ -46,9 +54,9 @@ class NewTimerController: WKInterfaceController {
         /*
          *---TIMER CODE HERE---*
          */
+        activeTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds), target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
         
-        //call this function after timer ends
-        startRest()
+        pulseTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds/2), target: self, selector: #selector(NewTimerController.setPulse), userInfo: nil, repeats: false)
         
     }
     
@@ -64,8 +72,12 @@ class NewTimerController: WKInterfaceController {
         lapLbl.setText(s)
     }
     
+    @objc func setPulse() {
+        pulseLabel.setText("164")
+    }
+    
     //Starts rest, sends current lap, number of laps and restTime to RestController
-    func startRest(){
+    @objc func startRest(){
         
         var s = String(laps)
         s.append(" ")
