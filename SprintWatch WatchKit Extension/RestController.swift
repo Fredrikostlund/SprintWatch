@@ -18,12 +18,15 @@ class RestController: WKInterfaceController {
     @IBOutlet weak var RestTimer: WKInterfaceTimer!
     @IBOutlet weak var RestLabel: WKInterfaceLabel!
     @IBOutlet weak var pulseLabel: WKInterfaceLabel!
+    @IBOutlet weak var lapLabel: WKInterfaceLabel!
     
     var countdownTimer = Timer()
     var times:Int = 0
     var timer = Timer()
     var restTime: Double = 0
     var pulseTimer = Timer()
+    var lap = 0
+    var currentLap = 0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -31,7 +34,7 @@ class RestController: WKInterfaceController {
         getData(context: context)
         
         let date = Date.init(timeIntervalSinceNow: restTime)
-        
+        setLabelText()
         RestTimer.setDate(date)
         RestTimer.start()
         
@@ -54,6 +57,8 @@ class RestController: WKInterfaceController {
         let s = String(describing: context ?? "none")
         let arr = s.split(separator: " ")
         restTime = Double(arr[1]) ?? 0
+        lap = Int(arr[0]) ?? 0
+        currentLap = Int(arr[2]) ?? 0
         print(restTime,"RestController")
         
     }
@@ -80,5 +85,14 @@ class RestController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    func setLabelText(){
+
+        var s = ""
+        s.append(String(currentLap))
+        s.append("/")
+        s.append(String(lap))
+        
+        lapLabel.setText(s)
+    }
 
 }

@@ -200,6 +200,9 @@
                                             <fontDescription key="font" type="system" pointSize="16"/>
                                         </label>
                                         <imageView width="10" height="10" alignment="left" verticalAlignment="center" image="heart" id="PkH-PU-6B0"/>
+                                        <label alignment="right" id="Xng-Cn-3JS">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
                                     </items>
                                 </group>
                             </items>
@@ -209,6 +212,7 @@
                         <outlet property="RestLabel" destination="H1g-SD-wKb" id="aI8-Fv-k9S"/>
                         <outlet property="RestTimer" destination="CmB-DL-5uB" id="SDX-kR-pbz"/>
                         <outlet property="backgroundGroup" destination="8QU-5A-VYn" id="ifr-Rj-O10"/>
+                        <outlet property="lapLabel" destination="Xng-Cn-3JS" id="8uK-qd-2SL"/>
                         <outlet property="pulseLabel" destination="qCN-5i-XBK" id="ISy-pw-dYA"/>
                     </connections>
                 </controller>

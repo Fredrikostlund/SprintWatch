@@ -52,9 +52,7 @@ class NewTimerController: WKInterfaceController {
     
     //Sets timer to start rest
     func timeToRest(){
-        /*
-         *---TIMER CODE HERE---*
-         */
+ 
         activeTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds), target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
         
         pulseTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds/2), target: self, selector: #selector(NewTimerController.setPulse), userInfo: nil, repeats: false)
@@ -101,7 +99,7 @@ class NewTimerController: WKInterfaceController {
     }
     
     func isFinished() {
-        if (currentLap == laps)  {
+        if (currentLap > laps)  {
             WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "FinishedController", context: laps as AnyObject)])
         }
     }
