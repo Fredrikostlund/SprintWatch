@@ -15,6 +15,7 @@ class NewTimerController: WKInterfaceController {
     var currentLap: Int = 0
     var laps: Int = 0
     var restTime: Int = 0
+    var activeTimer = Timer()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -35,7 +36,7 @@ class NewTimerController: WKInterfaceController {
         
         //Start timer
         timerOutlet.start()
-        
+        timeToRest()
 
         
         // Configure interface objects here.
@@ -46,9 +47,7 @@ class NewTimerController: WKInterfaceController {
         /*
          *---TIMER CODE HERE---*
          */
-        
-        //call this function after timer ends
-        startRest()
+        activeTimer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
         
     }
     
@@ -65,7 +64,7 @@ class NewTimerController: WKInterfaceController {
     }
     
     //Starts rest, sends current lap, number of laps and restTime to RestController
-    func startRest(){
+    @objc func startRest(){
         
         var s = String(laps)
         s.append(" ")
