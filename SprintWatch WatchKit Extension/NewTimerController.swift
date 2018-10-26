@@ -42,6 +42,7 @@ class NewTimerController: WKInterfaceController {
         setLabelText()
         
         //Start timer
+        isFinished()
         timerOutlet.start()
         timeToRest()
 
@@ -97,6 +98,12 @@ class NewTimerController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    func isFinished() {
+        if (currentLap == laps)  {
+            WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "FinishedController", context: laps as AnyObject)])
+        }
     }
     
     @IBOutlet weak var lapLbl: WKInterfaceLabel!
