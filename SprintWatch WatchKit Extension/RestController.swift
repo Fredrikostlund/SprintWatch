@@ -21,6 +21,8 @@ class RestController: WKInterfaceController {
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
     @IBOutlet private weak var heart: WKInterfaceImage!
     
+    var pulseTimer = Timer()
+    
     
     var countdownTimer = Timer()
     var times:Int = 0
@@ -36,25 +38,7 @@ class RestController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        if HKHealthStore.isHealthDataAvailable() {
-            let healthStore = HKHealthStore()
-            let heartRateQuantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!
-            let allTypes = Set([HKObjectType.workoutType(),
-                                heartRateQuantityType
-                ])
-            healthStore.requestAuthorization(toShare: nil, read: allTypes) { (result, error) in
-                if let error = error {
-                    // deal with the error
-                    print(error)
-                    return
-                }
-                guard result else {
-                    // deal with the failed request
-                    return
-                }
-                // begin any necessary work if needed
-            }
-        }
+        
         
         
     
@@ -160,6 +144,25 @@ class RestController: WKInterfaceController {
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
+        if HKHealthStore.isHealthDataAvailable() {
+            let healthStore = HKHealthStore()
+            let heartRateQuantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+            let allTypes = Set([HKObjectType.workoutType(),
+                                heartRateQuantityType
+                ])
+            healthStore.requestAuthorization(toShare: nil, read: allTypes) { (result, error) in
+                if let error = error {
+                    // deal with the error
+                    print(error)
+                    return
+                }
+                guard result else {
+                    // deal with the failed request
+                    return
+                }
+                // begin any necessary work if needed
+            }
+        }
         
         //TODO move all code related to circle to Willactivate()
         super.willActivate()
@@ -180,16 +183,18 @@ class RestController: WKInterfaceController {
         backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 101),
                                                  duration: duration,
                                                  repeatCount: 1)
+        
+        pulseTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(RestController.animateHeart), userInfo: nil, repeats: true)
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    func animateHeart() {
+    @objc func animateHeart() {
         self.animate(withDuration: 0.5) {
-            self.heart.setWidth(60)
-            self.heart.setHeight(90)
+            self.heart.setWidth(14)
+            self.heart.setHeight(15.5)
         }
         
         let when = DispatchTime.now() + Double(Int64(0.5 * double_t(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
@@ -197,8 +202,8 @@ class RestController: WKInterfaceController {
         DispatchQueue.global(qos: .default).async {
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.animate(withDuration: 0.5, animations: {
-                    self.heart.setWidth(30)
-                    self.heart.setHeight(30)
+                    self.heart.setWidth(16)
+                    self.heart.setHeight(18)
                 })            }
             
             

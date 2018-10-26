@@ -122,8 +122,10 @@
                                 <label alignment="center" verticalAlignment="center" text="Rest" id="H1g-SD-wKb"/>
                                 <group width="1" alignment="left" verticalAlignment="bottom" id="63q-0I-Elf">
                                     <items>
-                                        <label alignment="left" id="eZp-dw-726"/>
-                                        <imageView width="20" height="20" alignment="left" image="Image" id="zvA-AA-CyZ"/>
+                                        <label alignment="left" verticalAlignment="center" id="eZp-dw-726">
+                                            <fontDescription key="font" type="system" pointSize="18"/>
+                                        </label>
+                                        <imageView width="17" height="17" alignment="left" verticalAlignment="center" image="Image" id="zvA-AA-CyZ"/>
                                     </items>
                                 </group>
                             </items>
