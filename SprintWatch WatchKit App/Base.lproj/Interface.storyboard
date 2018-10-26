@@ -68,7 +68,7 @@
                             <items>
                                 <group width="72" height="45" alignment="center" verticalAlignment="center" id="iDm-HG-hfA">
                                     <items>
-                                        <label width="73" alignment="center" verticalAlignment="center" text="Laps 1/8" id="Nnn-PH-QCF">
+                                        <label width="73" alignment="center" verticalAlignment="center" text="Laps 1/8" textAlignment="center" id="Nnn-PH-QCF">
                                             <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
                                         </label>
                                     </items>

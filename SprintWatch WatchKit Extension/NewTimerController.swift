@@ -46,7 +46,8 @@ class NewTimerController: WKInterfaceController {
     func setLabelText(){
         currentLap += 1
         
-        var s = String(currentLap)
+        var s = String("Lap ")
+        s.append(String(currentLap))
         s.append("/")
         s.append(String(laps))
         
