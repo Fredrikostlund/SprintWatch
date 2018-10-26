@@ -36,10 +36,20 @@ class NewTimerController: WKInterfaceController {
         //Start timer
         timerOutlet.start()
         
-        //start restTime
-        startRest()
+
         
         // Configure interface objects here.
+    }
+    
+    //Sets timer to start rest
+    func timeToRest(){
+        /*
+         *---TIMER CODE HERE---*
+         */
+        
+        //call this function after timer ends
+        startRest()
+        
     }
     
     //sets lap label to current lap and max laps (current/max)
