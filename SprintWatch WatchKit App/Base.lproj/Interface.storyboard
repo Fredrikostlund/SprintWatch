@@ -91,11 +91,12 @@
                         </group>
                         <group width="1" alignment="left" verticalAlignment="bottom" id="BXr-xv-Qg9">
                             <items>
-                                <group width="104" height="45" alignment="center" verticalAlignment="center" id="7c7-DW-qGD">
+                                <group width="60" height="45" alignment="center" verticalAlignment="center" id="7c7-DW-qGD">
                                     <items>
-                                        <label width="85" alignment="center" verticalAlignment="center" text="Heartrate" id="ts0-jW-rnv">
+                                        <label width="36" alignment="center" verticalAlignment="center" text="158" id="ts0-jW-rnv">
                                             <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
                                         </label>
+                                        <imageView width="10" height="10" alignment="right" verticalAlignment="center" image="heart" id="8Hg-ra-VrT"/>
                                     </items>
                                 </group>
                             </items>
@@ -103,6 +104,7 @@
                     </items>
                     <connections>
                         <outlet property="lapLbl" destination="Nnn-PH-QCF" id="Hhr-2L-zby"/>
+                        <outlet property="pulseLabel" destination="ts0-jW-rnv" id="iS1-lp-3qp"/>
                         <outlet property="timerOutlet" destination="Nm6-7I-ngG" id="BgC-jk-4SM"/>
                         <segue destination="t9d-ju-hFQ" kind="relationship" relationship="nextPage" id="yGi-Iq-CzW"/>
                     </connections>
@@ -192,6 +194,17 @@
                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                 </timer>
                                 <label alignment="center" verticalAlignment="center" text="Rest" id="H1g-SD-wKb"/>
+                                <group width="1" alignment="left" verticalAlignment="bottom" id="gzx-sf-V1G">
+                                    <items>
+                                        <label alignment="left" text="128" id="qCN-5i-XBK">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
+                                        <imageView width="10" height="10" alignment="left" verticalAlignment="center" image="heart" id="PkH-PU-6B0"/>
+                                        <label alignment="right" id="Xng-Cn-3JS">
+                                            <fontDescription key="font" type="system" pointSize="16"/>
+                                        </label>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -199,6 +212,8 @@
                         <outlet property="RestLabel" destination="H1g-SD-wKb" id="aI8-Fv-k9S"/>
                         <outlet property="RestTimer" destination="CmB-DL-5uB" id="SDX-kR-pbz"/>
                         <outlet property="backgroundGroup" destination="8QU-5A-VYn" id="ifr-Rj-O10"/>
+                        <outlet property="lapLabel" destination="Xng-Cn-3JS" id="8uK-qd-2SL"/>
+                        <outlet property="pulseLabel" destination="qCN-5i-XBK" id="ISy-pw-dYA"/>
                     </connections>
                 </controller>
             </objects>
