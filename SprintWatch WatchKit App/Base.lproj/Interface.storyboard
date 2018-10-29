@@ -207,7 +207,7 @@
         <!--Lap Controller-->
         <scene sceneID="c58-AU-4hh">
             <objects>
-                <controller id="gKh-rv-rB7" customClass="LapController" customModule="SprintWatch_WatchKit_Extension">
+                <controller fullScreen="YES" id="gKh-rv-rB7" customClass="LapController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <label height="15" alignment="left" verticalAlignment="center" text="Set laps" id="ttc-zu-ouX">
                             <color key="textColor" red="0.83137254901960778" green="0.0" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -238,7 +238,7 @@
         <!--Rest Time Controller-->
         <scene sceneID="mFj-zT-7dg">
             <objects>
-                <controller id="RsU-al-V4z" customClass="RestTimeController" customModule="SprintWatch_WatchKit_Extension">
+                <controller fullScreen="YES" id="RsU-al-V4z" customClass="RestTimeController" customModule="SprintWatch_WatchKit_Extension">
                     <items>
                         <label height="15" alignment="left" verticalAlignment="center" text="Set rest time" id="bD5-tr-8ny">
                             <color key="textColor" red="0.83137254900000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
