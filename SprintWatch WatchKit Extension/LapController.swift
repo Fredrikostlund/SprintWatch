@@ -12,7 +12,7 @@ import Foundation
 
 class LapController: WKInterfaceController{
     
-    var lapIndex = 0
+    var lapCount = 0
     var pickerItems: [WKPickerItem] = []
     
     override func awake(withContext context: Any?) {
@@ -38,7 +38,7 @@ class LapController: WKInterfaceController{
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         
         if segueIdentifier == "lapId"{
-            return lapIndex+1
+            return lapCount
         }
         
         return 0
@@ -57,8 +57,9 @@ class LapController: WKInterfaceController{
     //Outlet to Picker where you can choose number of laps
     @IBOutlet weak var lapPicker: WKInterfacePicker!
     
+    //Changes lapIndex to value shown on Picker
     @IBAction func pickerChanged(_ value: Int){
-        lapIndex = value
+        lapCount = value+1
     }
     
 }

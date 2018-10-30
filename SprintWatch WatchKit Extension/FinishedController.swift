@@ -26,6 +26,8 @@ class FinishedController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
+    //Button that redirects the user to first view in application.
     @IBAction func finishBtn() {
         WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "InterfaceController", context: "none" as AnyObject)])
     }

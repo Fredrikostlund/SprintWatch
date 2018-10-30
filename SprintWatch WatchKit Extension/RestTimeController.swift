@@ -14,13 +14,14 @@ class RestTimeController: WKInterfaceController{
     
     var pickerItems: [WKPickerItem] = []
     var laps: Any? = 0
-    var timeIndex: Int = 0
+    var restTime: Int = 0
     
     var s:String = ""
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        //extracts context to laps
         laps = context
         
         setPickerItems()
@@ -39,16 +40,6 @@ class RestTimeController: WKInterfaceController{
         restTimePicker.setItems(pickerItems)
     }
     
-    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
-        
-        if segueIdentifier == "countdownId"{
-            return (laps as! Int, timeIndex+1)
-        }
-        
-        return 0
-    }
-
-    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -59,17 +50,20 @@ class RestTimeController: WKInterfaceController{
         super.didDeactivate()
     }
     
+    //Redirects user to CountdownController with lap count and rest time as context string
     @IBAction func doneBtn() {
         s.append(String(describing: laps ?? "none"))
         s.append(" ")
-        s.append(String(timeIndex+1))
+        s.append(String(restTime))
         
         WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "CountdownController", context: s as AnyObject)])
     }
     
     @IBOutlet weak var restTimePicker: WKInterfacePicker!
+    
+    //Changes timeIndex to value shown on Picker
     @IBAction func RestTimeAction(_ value: Int) {
-        timeIndex = value
+        restTime = value+1
     }
     
 }

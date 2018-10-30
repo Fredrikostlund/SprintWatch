@@ -14,7 +14,8 @@ class NewTimerController: WKInterfaceController {
     
     
     @IBOutlet weak var pulseLabel: WKInterfaceLabel!
-    
+    @IBOutlet weak var lapLbl: WKInterfaceLabel!
+    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
     
     var currentLap: Int = 0
     var laps: Int = 0
@@ -33,33 +34,38 @@ class NewTimerController: WKInterfaceController {
         laps = Int(arr[0]) ?? 0
         restTime = Int(arr[1]) ?? 0
         
-        //If containing currentLap from RestController
+        //Extract current lap if containing third element
         if(arr.count == 3){
             currentLap = Int(arr[2]) ?? 0
             print(currentLap)
         }
         
+        //Set the text of the lap label
         setLabelText()
         
-        //Start timer
+        //Check if the workout is finished, based on laps
         isFinished()
-        timerOutlet.start()
-        timeToRest()
-
         
-        // Configure interface objects here.
+        //Start timer
+        timerOutlet.start()
+        
+        //Begin rest
+        timeToRest()
+        
     }
     
     //Sets timer to start rest
     func timeToRest(){
- 
+        
+        //Timer to start rest after (activeSeconds). This is for demo purposes
         activeTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds), target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
         
+        //Simulates a pulse. This is for demo purposes
         pulseTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds/2), target: self, selector: #selector(NewTimerController.setPulse), userInfo: nil, repeats: false)
         
     }
     
-    //sets lap label to current lap and max laps (current/max)
+    //Increments currentLap and sets lap label to current lap and max laps (current/max)
     func setLabelText(){
         currentLap += 1
         
@@ -98,14 +104,11 @@ class NewTimerController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    //Checks if the user has done all laps. If so, finishes workout.
     func isFinished() {
         if (currentLap > laps)  {
             WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "FinishedController", context: laps as AnyObject)])
         }
     }
-    
-    @IBOutlet weak var lapLbl: WKInterfaceLabel!
-    @IBOutlet weak var timerOutlet: WKInterfaceTimer!
-
     
 }
