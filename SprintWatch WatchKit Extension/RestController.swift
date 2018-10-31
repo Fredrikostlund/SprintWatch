@@ -50,7 +50,7 @@ class RestController: WKInterfaceController {
     func endOfRest(context:Any?){
         let values = String(describing: context ?? "none")
         
-        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "TimerController", context: values as AnyObject)])
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "TimerController", context: values as AnyObject),(name: "PausController", context: values as AnyObject)])
     }
     
     func getData(context:Any?){
