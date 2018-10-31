@@ -32,6 +32,12 @@ class NewTimerController: WKInterfaceController {
         let s = String(describing: context ?? "none")
         let arr = s.split(separator: " ")
         laps = Int(arr[0]) ?? 0
+        
+        //Picker bug fix
+        if(laps == 0){
+            laps = 1
+        }
+        
         restTime = Int(arr[1]) ?? 0
         
         //Extract current lap if containing third element
@@ -56,10 +62,12 @@ class NewTimerController: WKInterfaceController {
     
     //Sets timer to start rest
     func timeToRest(){
-        
+
         //Timer to start rest after (activeSeconds). This is for demo purposes
-        activeTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds), target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
-        
+        if (!(currentLap > laps)){
+            print("helloooo")
+            activeTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds), target: self, selector: #selector(NewTimerController.startRest), userInfo: nil, repeats: false)
+        }
         //Simulates a pulse. This is for demo purposes
         pulseTimer = Timer.scheduledTimer(timeInterval: TimeInterval(activeSeconds/2), target: self, selector: #selector(NewTimerController.setPulse), userInfo: nil, repeats: false)
         
