@@ -35,6 +35,7 @@ class NewSwipeController: WKInterfaceController {
     }
     
     @IBAction func StopButton() {
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "FinishedController", context: "none" as AnyObject)])
     }
     
     
